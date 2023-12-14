@@ -1,10 +1,15 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const WelcomePage = () => {
     return (
-        <div>
-            hello
-        </div>
+        <>
+            <Navbar />
+            <div>
+                hello
+            </div>
+        </>
+
     )
 }
 
