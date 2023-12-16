@@ -9,7 +9,7 @@ const HeroSection: React.FC<{ start: MouseEventHandler<HTMLElement> }> = ({
     <div className="hero-container">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Learn to Code RPG Quiz</h1>
+          <h1>Computer Science Quiz</h1>
           <h2>
             Practice with{" "}
             <strong className="question-count">

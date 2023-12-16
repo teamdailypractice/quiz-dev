@@ -67,14 +67,14 @@ const WelcomePage: React.FC<{ start: MouseEventHandler<HTMLElement> }> = ({
               .
             </p>
           </div>
-          <div className="col-md-5 order-md-1 content-img-container">
+          {/* <div className="col-md-5 order-md-1 content-img-container">
             <img
               src={fccBackground}
               className="img-fluid rounded"
               id="#fcc-image"
               alt="freeCodeCamp rpg logo"
             />
-          </div>
+          </div> */}
         </div>
 
         <hr className="featurette-divider" id="divider" />
@@ -103,13 +103,13 @@ const WelcomePage: React.FC<{ start: MouseEventHandler<HTMLElement> }> = ({
               Available for free download on <br /> Windows, Mac and Linux.
             </p>
           </div>
-          <div className="col-md-5 order-md-2 content-img-container">
+          {/* <div className="col-md-5 order-md-2 content-img-container">
             <img
               src={rpgMenu}
               className="img-fluid rounded"
               alt="freeCodeCamp rpg logo"
             />
-          </div>
+          </div> */}
         </div>
       </main>
     </>

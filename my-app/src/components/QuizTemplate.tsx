@@ -210,7 +210,9 @@ const QuizTemplate: React.FC<QuizProps> = QuizProps => {
     resetQuiz
   };
 
+  let topic: string = "Git";
   const questionProps = {
+    topic,
     currQuestion,
     questionNumber,
     totalQuestions,

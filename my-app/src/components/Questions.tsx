@@ -12,6 +12,7 @@ interface QuizQuestion {
 }
 
 interface QuizProps {
+  topic: string;
   currQuestion: { Question: string };
   questionNumber: number;
   totalQuestions: number;
@@ -23,6 +24,7 @@ interface QuizProps {
   selectOption: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   checkAnswer: () => void;
   answerButtonsRef: React.MutableRefObject<HTMLUListElement | null>;
+  nextQuestion: MouseEventHandler;
 }
 
 const Questions: React.FC<QuizProps> = QuizProps => {
@@ -34,16 +36,16 @@ const Questions: React.FC<QuizProps> = QuizProps => {
         </p>
         <p>Points: {QuizProps.points}</p>
       </div>
-      <h1 className="quiz-heading">Question {QuizProps.questionNumber}</h1>
+      <h1 className="quiz-heading">{QuizProps.topic}</h1>
       <div className="quiz-div">
         {QuizProps.chooseAnswer ? (
           <QuizModal {...QuizProps.modalProps} />
         ) : (
           <fieldset className="w-50 quiz-answers-div">
             <legend>
-              <span className="sr-only">
+              {/* <span className="sr-only">
                 Question {QuizProps.questionNumber}
-              </span>{" "}
+              </span>{" "} */}
               {QuizProps.currQuestion.Question}
             </legend>
             <ul ref={QuizProps.answerButtonsRef}>
@@ -65,7 +67,12 @@ const Questions: React.FC<QuizProps> = QuizProps => {
             <button
               className="select-btns submit-btn"
               style={{ opacity: QuizProps.selectedOption ? 1 : 0.5 }}
-              onClick={() => QuizProps.checkAnswer()}
+              onClick={(e) =>
+                {
+                  QuizProps.checkAnswer();
+                  QuizProps.nextQuestion(e);
+                }
+              }
             >
               Submit
             </button>

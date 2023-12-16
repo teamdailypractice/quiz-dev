@@ -1,5 +1,5 @@
 import React from "react";
-import fCClogo from "../images/fcc_primary_large.webp";
+import fCClogo from "../images/dailypractice.png";
 
 const FCCLogo: React.FC = () => {
   return <img className="fcc-logo" src={fCClogo} alt="freeCodeCamp logo" />;
