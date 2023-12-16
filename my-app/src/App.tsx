@@ -1,15 +1,18 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
 import WelcomePage from "./components/WelcomePage";
+import QuizTemplate from "./components/QuizTemplate";
+import React, { useState } from "react";
 
-function App() {
+const App: React.FC = () => {
+  const [isHomePage, setIsHomePage] = useState(true);
+  const toggleHomePage = () => setIsHomePage(!isHomePage);
   return (
     <>
-        <WelcomePage />
-    
+      {isHomePage ? (
+        <WelcomePage start={toggleHomePage} />
+      ) : (
+        <QuizTemplate home={toggleHomePage} />
+      )}
     </>
   );
-}
-
+};
 export default App;
