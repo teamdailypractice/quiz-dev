@@ -12,7 +12,7 @@ interface QuizQuestion {
 }
 
 interface QuizProps {
-  topic: string;
+  category: string;
   currQuestion: { Question: string };
   questionNumber: number;
   totalQuestions: number;
@@ -36,7 +36,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
         </p>
         <p>Points: {QuizProps.points}</p>
       </div>
-      <h1 className="quiz-heading">{QuizProps.topic}</h1>
+      <h1 className="quiz-heading">{QuizProps.category}</h1>
       <div className="quiz-div">
         {QuizProps.chooseAnswer ? (
           <QuizModal {...QuizProps.modalProps} />

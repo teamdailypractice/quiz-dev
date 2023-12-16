@@ -204,15 +204,18 @@ const QuizTemplate: React.FC<QuizProps> = QuizProps => {
     nextQuestion
   };
 
+  let category:string = selectedCategory;
+  
   const resultsProps = {
+    category,
     points,
     totalQuestions,
     resetQuiz
   };
 
-  let topic: string = "Git";
+  
   const questionProps = {
-    topic,
+    category,
     currQuestion,
     questionNumber,
     totalQuestions,

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 
 interface PointTotals {
+  category: string
   points: number;
   totalQuestions: number;
   resetQuiz: () => void;
 }
 
 const Results: React.FC<PointTotals> = ({
+  category,
   points,
   totalQuestions,
   resetQuiz
