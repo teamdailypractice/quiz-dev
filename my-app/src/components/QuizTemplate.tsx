@@ -34,7 +34,7 @@ const QuizTemplate: React.FC<QuizProps> = QuizProps => {
   const [isReady, setIsReady] = useState(false);
   const selectCategoryArr = [
     "Git",
-    // "HTML",
+    "Java Basics",
     // "CSS",
     // "JavaScript",
     // "Accessibility",

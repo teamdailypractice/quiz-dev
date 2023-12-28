@@ -1,4 +1,5 @@
 import gitQuiz from "./data/git-quiz";
+import javaBasicsQuiz from "./data/java-basics-quiz";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mapQuizCategory = (quiz: any[], category: string) => {
@@ -6,7 +7,9 @@ const mapQuizCategory = (quiz: any[], category: string) => {
 };
 export const ALL_CATEGORIES = [
   ...mapQuizCategory(gitQuiz, "Git"),
+  ...mapQuizCategory(javaBasicsQuiz, "Java Basics"),
+
 
 ];
 
-export const ROUNDED_QUESTION_COUNT = 2;
+export const ROUNDED_QUESTION_COUNT = 4;
